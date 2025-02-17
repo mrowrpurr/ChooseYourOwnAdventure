@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+<PapyrusProject xmlns="PapyrusProject.xsd" Flags="TESV_Papyrus_Flags.flg" Game="sse" Output="Scripts">
+    <Variables>
+        <Variable Name="Imports" Value="D:\Dropbox\Skyrim\Papyrus Imports" />
+    </Variables>
+    <Imports>
+        <Import>@Imports\SKSE</Import>
+        <Import>@Imports\GameScripts</Import>
+    </Imports>
+    <Folders>
+        <Folder>./Scripts/Source</Folder>
+    </Folders>
+</PapyrusProject>
