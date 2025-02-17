@@ -1,5 +1,8 @@
 scriptName QuestWeaverPlayer extends Actor
 
+int PUSH_TO_TALK_KEY = 211 ; Delete
+int TEXTBOX_OPEN_KEY = 210 ; Insert
+
 event OnInit()
   Debug.Notification("Quest Weaver initialized")
   ListenForKeys()
@@ -12,14 +15,23 @@ endEvent
 
 function ListenForKeys()
   UnregisterForAllKeys()
-  RegisterForKey(197) ; Pause
+  RegisterForKey(PUSH_TO_TALK_KEY)
+  RegisterForKey(TEXTBOX_OPEN_KEY)
 endFunction
 
-event OnKeyDown(int a_key)
-  if a_key == 197 ; Pause
+event OnKeyDown(int keyCode)
+  if keyCode == TEXTBOX_OPEN_KEY
     Actor crosshairActor = Game.GetCurrentCrosshairRef() as Actor
     if crosshairActor
-      Debug.MessageBox("Crosshair actor: " + crosshairActor.GetActorBase().GetName())
+      OpenTextBoxPrompt()
     endIf
   endIf
 endEvent
+
+string function OpenTextBoxPrompt()
+  UIExtensions.InitMenu("UITextEntryMenu")
+  UIExtensions.OpenMenu("UITextEntryMenu")
+  string result = UIExtensions.GetMenuResultString("UITextEntryMenu")
+  Debug.Notification("Result: " + result)
+  return result
+endFunction
