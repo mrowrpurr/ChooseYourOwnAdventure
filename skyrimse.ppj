@@ -4,6 +4,7 @@
         <Variable Name="Imports" Value="D:\Dropbox\Skyrim\Papyrus Imports" />
     </Variables>
     <Imports>
+        <Import>@Imports\UIExtensions</Import>
         <Import>@Imports\SKSE</Import>
         <Import>@Imports\GameScripts</Import>
     </Imports>
