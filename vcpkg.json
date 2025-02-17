@@ -1,0 +1,11 @@
+{
+  "name": "questweaver",
+  "version": "0.1.0",
+  "dependencies": [
+    {
+      "name": "commonlibsse-powerof3",
+      "features": ["skyrim-ae"]
+    },
+    "skse-plugin-definition"
+  ]
+}
