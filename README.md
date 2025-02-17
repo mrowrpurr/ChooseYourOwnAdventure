@@ -1,3 +1,5 @@
-![Quest Weaver](resources/images/QuestWeaver_512.jpg)
+![Choose Your Own Adventure](resources/images/ChooseYourOwnAdventure_1024.png)
 
-# Quest Weaver
+---
+
+# Choose Your Own Adventure
