@@ -1,4 +1,4 @@
-scriptName QuestWeaverPlayer extends Actor
+scriptName CYOA_PlayerScript extends Actor
 
 int PUSH_TO_TALK_KEY = 211 ; Delete
 int TEXTBOX_OPEN_KEY = 210 ; Insert
