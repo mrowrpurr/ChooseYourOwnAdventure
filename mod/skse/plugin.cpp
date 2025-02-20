@@ -10,8 +10,6 @@ extern "C" __declspec(dllexport) bool SKSEPlugin_Load(const SKSE::LoadInterface*
             if (a_msg->type == SKSE::MessagingInterface::kDataLoaded)
                 RE::ConsoleLog::GetSingleton()->Print("'Choose Your Own Adventure' initialized.");
         }
-
-        //
     );
 
     return true;

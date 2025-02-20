@@ -11,7 +11,7 @@ namespace ChooseYourOwnAdventure {
         }
 
         bool BindFunctions(RE::BSScript::IVirtualMachine* vm) {
-            vm->BindNativeMethod("ChooseYourOwnAdventure", "GetPlayerChoice", GetPlayerChoice);
+            vm->RegisterFunction("GetPlayerChoice", "ChooseYourOwnAdventure", GetPlayerChoice);
             return true;
         }
     }
