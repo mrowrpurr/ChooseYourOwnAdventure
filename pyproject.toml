@@ -1,5 +1,5 @@
 [project]
-name = "chooseyourownadventure"
+name = "chooseyourownadventure-project"
 version = "0.1.0"
 description = ""
 authors = [{ name = "Mrowr Purr", email = "mrowr.purr@gmail.com" }]
@@ -8,7 +8,14 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "notebooks @ file:///D:/Code/mrowrpurr/ChooseYourOwnAdventure/notebooks",
+    "choose-your-own-adventure @ file:///D:/Code/mrowrpurr/ChooseYourOwnAdventure/api",
 ]
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.dependencies]
+choose-your-own-adventure = {develop = true}
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
