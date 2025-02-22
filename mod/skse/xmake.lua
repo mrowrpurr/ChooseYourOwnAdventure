@@ -7,7 +7,8 @@ add_repositories("SkyrimScripting https://github.com/SkyrimScripting/Packages.gi
 add_requires(
     "skyrim-commonlib-ae",
     "skyrim-commonlib-se",
-    "skyrim-commonlib-vr"
+    "skyrim-commonlib-vr",
+    "skyrim-commonlib-ng"
 )
 
 mod_info = {
@@ -22,6 +23,20 @@ local mods_folders = os.getenv("SKYRIM_MODS_FOLDERS")
 if mods_folders then
     mod_info.mods_folders = mods_folders
 end
+
+target("SKSE Plugin - NG")
+    set_basename("ChooseYourOwnAdventure-NG")
+    add_files("plugin.cpp")
+    add_packages("skyrim-commonlib-ng")
+    add_rules("@skyrim-commonlib-ng/plugin", {
+        mod_name = "Choose Your Own Adventure (NG)",
+        mods_folders = mod_info.mods_folders or "",
+        mod_files = mod_info.mod_files,
+        name = mod_info.name,
+        version = mod_info.version,
+        author = mod_info.author,
+        email = mod_info.email
+    })
 
 target("SKSE Plugin - AE")
     set_basename("ChooseYourOwnAdventure")
